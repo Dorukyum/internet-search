@@ -35,5 +35,9 @@
   ],
   "description": "Use your default browser to search anything quickly",
   "icon": "./icon.png",
-  "publisher": "Dorukyum"
+  "publisher": "Dorukyum",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dorukyum/internet-search"
+  }
 }

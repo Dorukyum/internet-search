@@ -5,8 +5,9 @@ ext = vscode.Extension(
     "Internet Search",
     "0.0.1",
     "Use your default browser to search anything quickly",
-    './icon.png',
-    publisher="Dorukyum",
+    "./icon.png",
+    {"type": "git", "url": "https://github.com/Dorukyum/internet-search"},
+    "Dorukyum",
 )
 ext.set_default_category("Search")
 
