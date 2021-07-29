@@ -34,7 +34,7 @@
     "onCommand:internet-search.Bing"
   ],
   "description": "Use your default browser to search anything quickly",
-  "icon": "./icon.png",
+  "icon": "icon.png",
   "publisher": "Dorukyum",
   "repository": {
     "type": "git",
