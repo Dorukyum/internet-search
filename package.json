@@ -1,0 +1,39 @@
+{
+  "name": "internet-search",
+  "displayName": "Internet Search",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.58.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./build/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "internet-search.DuckDuckGo",
+        "title": "Duckduckgo",
+        "category": "Search"
+      },
+      {
+        "command": "internet-search.Google",
+        "title": "Google",
+        "category": "Search"
+      },
+      {
+        "command": "internet-search.Bing",
+        "title": "Bing",
+        "category": "Search"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:internet-search.DuckDuckGo",
+    "onCommand:internet-search.Google",
+    "onCommand:internet-search.Bing"
+  ],
+  "description": "Use your default browser to search anything quickly",
+  "icon": "./icon.png",
+  "publisher": "Dorukyum"
+}
