@@ -1,3 +1,5 @@
+from typing import Optional
+
 import vscode
 
 ext = vscode.Extension(
@@ -13,34 +15,31 @@ ext.set_default_category("Search")
 
 
 @ext.command("DuckDuckGo")
-def duckduckgo():
+def duckduckgo() -> None:
     command("duckduckgo", "")
 
 
 @ext.command("Google")
-def google():
+def google() -> None:
     command("google", "search")
 
 
 @ext.command("Bing")
-def bing():
+def bing() -> None:
     command("bing", "search")
 
 
-def command(engine, path):
+def command(engine, path) -> None:
+    query: Optional[str] = None
     editor = vscode.window.ActiveTextEditor()
     if editor != vscode.ext.undefined:
         selection = editor.document.get_text(editor.selection)
         if selection:
             query = selection
-        else:
-            query = vscode.window.show_input_box(
-                vscode.ext.InputBoxOptions("What would you like to search for?")
-            )
-    else:
-        query = vscode.window.show_input_box(
-            vscode.ext.InputBoxOptions("What would you like to search for?")
-        )
+
+    query = query or vscode.window.show_input_box(
+        vscode.ext.InputBoxOptions("What would you like to search for?")
+    )
     if not query:
         return
 
